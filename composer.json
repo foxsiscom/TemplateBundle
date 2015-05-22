@@ -1,0 +1,20 @@
+{
+	"name" : "foxsiscom/templatebundle",
+	"license" : "proprietary",
+	"type" : "symfony-bundle",
+	"description" : "Layouts da Foxsis",
+	"autoload" : {
+		"psr-0" : {
+			"Foxsiscom\\TemplateBundle" : ""
+		}
+	},
+	"require" : {
+		"php" : ">=5.3.3"
+	},
+	"homepage" : "https://github.com/foxsiscom/templatebundle",
+	"support" : {
+		"email" : "contato@foxsis.com",
+		"issues" : "https://github.com/foxsiscom/basebundle/issues"
+	},
+	"target-dir" : "Foxsiscom/TemplateBundle"
+}
