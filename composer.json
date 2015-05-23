@@ -14,7 +14,6 @@
 	"homepage" : "https://github.com/foxsiscom/templatebundle",
 	"support" : {
 		"email" : "contato@foxsis.com",
-		"issues" : "https://github.com/foxsiscom/basebundle/issues"
-	},
-	"target-dir" : "Foxsiscom/TemplateBundle"
+		"issues" : "https://github.com/foxsiscom/templatebundle/issues"
+	}
 }
