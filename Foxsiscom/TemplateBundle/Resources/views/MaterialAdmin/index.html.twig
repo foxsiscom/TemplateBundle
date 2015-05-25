@@ -16,6 +16,7 @@
                 'bundles/foxsiscomtemplate/theme/MaterialAdmin/vendors/fullcalendar/fullcalendar.css'
                 'bundles/foxsiscomtemplate/theme/MaterialAdmin/vendors/animate-css/animate.min.css'
                 'bundles/foxsiscomtemplate/theme/MaterialAdmin/vendors/sweet-alert/sweet-alert.min.css'
+                'bundles/foxsiscomtemplate/theme/MaterialAdmin/vendors/summernote/summernote.css'
                 'bundles/foxsiscomtemplate/theme/MaterialAdmin/css/app.min.css'
             %}
                 <link rel="stylesheet" href="{{ asset_url }}" />
@@ -38,7 +39,7 @@
                 </li>
 
                 <li class="logo hidden-xs">
-                    <a href="index.html">Material Admin</a>
+                    <a href="index.html">irtun <small>(Nutrição funcional)</small></a>
                 </li>
 
                 <li class="pull-right">
@@ -321,66 +322,28 @@
                         </div>
 
                         <ul class="main-menu">
-                            <li class="active"><a href="index.html"><i class="md md-home"></i> Home</a></li>
-                            <li><a href="typography.html"><i class="md md-format-underline"></i> Typography</a></li>
+                            <li class="active"><a href="index.html"><i class="md md-home"></i> Início</a></li>
+                            <li><a href="typography.html"><i class="md md-event-note"></i> Agenda</a></li>
                             <li class="sub-menu">
-                                <a href=""><i class="md md-now-widgets"></i> Widgets</a>
+                                <a href=""><i class="md  md-local-restaurant"></i> Dietas</a>
 
                                 <ul>
-                                    <li><a href="widget-templates.html">Templates</a></li>
-                                    <li><a class="active" href="widgets.html">Widgets</a></li>
+                                    <li><a href="widget-templates.html">Itens de dieta</a></li>
+                                    <li><a class="active" href="widgets.html">Elaboração de dietas</a></li>
                                 </ul>
                             </li>
+                            <li><a href="typography.html"><i class="md  md-perm-contact-cal"></i> Pacientes</a></li>
+                            <li><a href="typography.html"><i class="md  md-view-list"></i> Perguntas(anamnese)</a></li>
+                            <li><a href="typography.html"><i class="md  md-my-library-books"></i> Referências bibliográficas</a></li>
                             <li class="sub-menu">
-                                <a href=""><i class="md md-view-list"></i> Tables</a>
+                                <a href=""><i class="md  md-trending-up"></i> Relatórios gerenciais</a>
 
                                 <ul>
-                                    <li><a href="tables.html">Normal Tables</a></li>
-                                    <li><a href="data-tables.html">Data Tables</a></li>
+                                    <li><a href="widget-templates.html">Itens de dieta</a></li>
+                                    <li><a class="active" href="widgets.html">Elaboração de dietas</a></li>
                                 </ul>
                             </li>
-                            <li class="sub-menu">
-                                <a href=""><i class="md md-my-library-books"></i> Forms</a>
 
-                                <ul>
-                                    <li><a href="form-elements.html">Basic Form Elements</a></li>
-                                    <li><a href="form-components.html">Form Components</a></li>
-                                    <li><a href="form-examples.html">Form Examples</a></li>
-                                    <li><a href="form-validations.html">Form Validation</a></li>
-                                </ul>
-                            </li>
-                            <li class="sub-menu">
-                                <a href=""><i class="md md-swap-calls"></i>User Interface</a>
-                                <ul>
-                                    <li><a href="colors.html">Colors</a></li>
-                                    <li><a href="animations.html">Animations</a></li>
-                                    <li><a href="buttons.html">Buttons</a></li>
-                                    <li><a href="icons.html">Icons</a></li>
-                                    <li><a href="alerts.html">Alerts</a></li>
-                                    <li><a href="notification-dialog.html">Notifications & Dialogs</a></li>
-                                    <li><a href="media.html">Media</a></li>
-                                    <li><a href="components.html">Components</a></li>
-                                    <li><a href="other-components.html">Others</a></li>
-                                </ul>
-                            </li>
-                            <li class="sub-menu">
-                                <a href=""><i class="md md-trending-up"></i>Charts</a>
-                                <ul>
-                                    <li><a href="flot-charts.html">Flot Charts</a></li>
-                                    <li><a href="other-charts.html">Other Charts</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="calendar.html"><i class="md md-today"></i> Calendar</a></li>
-                            <li><a href="generic-classes.html"><i class="md md-layers"></i> Generic Classes</a></li>
-                            <li class="sub-menu">
-                                <a href=""><i class="md md-content-copy"></i> Sample Pages</a>
-                                <ul>
-                                    <li><a href="list-view.html">List View</a></li>
-                                    <li><a href="messages.html">Messages</a></li>
-                                    <li><a href="login.html">Login and Sign Up</a></li>
-                                    <li><a href="404.html">Error 404</a></li>
-                                </ul>
-                            </li>
                         </ul>
                     </div>
                 </div>
@@ -1206,15 +1169,18 @@
             '@FoxsiscomTemplateBundle/Resources/public/theme/MaterialAdmin/vendors/easypiechart/jquery.easypiechart.min.js'
             '@FoxsiscomTemplateBundle/Resources/public/theme/MaterialAdmin/vendors/fullcalendar/lib/moment.min.js'
             '@FoxsiscomTemplateBundle/Resources/public/theme/MaterialAdmin/vendors/fullcalendar/fullcalendar.min.js'
+            '@FoxsiscomTemplateBundle/Resources/public/theme/MaterialAdmin/vendors/bootstrap-select/bootstrap-select.min.js'
+            '@FoxsiscomTemplateBundle/Resources/public/theme/MaterialAdmin/vendors/chosen/chosen.jquery.min.js'
             '@FoxsiscomTemplateBundle/Resources/public/theme/MaterialAdmin/vendors/simpleWeather/jquery.simpleWeather.min.js'
             '@FoxsiscomTemplateBundle/Resources/public/theme/MaterialAdmin/vendors/auto-size/jquery.autosize.min.js'
             '@FoxsiscomTemplateBundle/Resources/public/theme/MaterialAdmin/vendors/nicescroll/jquery.nicescroll.min.js'
             '@FoxsiscomTemplateBundle/Resources/public/theme/MaterialAdmin/vendors/waves/waves.min.js'
             '@FoxsiscomTemplateBundle/Resources/public/theme/MaterialAdmin/vendors/bootstrap-growl/bootstrap-growl.min.js'
             '@FoxsiscomTemplateBundle/Resources/public/theme/MaterialAdmin/vendors/sweet-alert/sweet-alert.min.js'
+            '@FoxsiscomTemplateBundle/Resources/public/theme/MaterialAdmin/vendors/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js'
+            '@FoxsiscomTemplateBundle/Resources/public/theme/MaterialAdmin/vendors/summernote/summernote.min.js'
             '@FoxsiscomTemplateBundle/Resources/public/theme/MaterialAdmin/js/flot-charts/curved-line-chart.js'
             '@FoxsiscomTemplateBundle/Resources/public/theme/MaterialAdmin/js/flot-charts/line-chart.js'
-            '@FoxsiscomTemplateBundle/Resources/public/theme/MaterialAdmin/js/charts.js'
             '@FoxsiscomTemplateBundle/Resources/public/theme/MaterialAdmin/js/charts.js'
             '@FoxsiscomTemplateBundle/Resources/public/theme/MaterialAdmin/js/functions.js'
         %}
