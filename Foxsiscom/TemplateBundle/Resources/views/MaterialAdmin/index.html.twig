@@ -320,31 +320,7 @@
                                 </li>
                             </ul>
                         </div>
-
-                        <ul class="main-menu">
-                            <li class="active"><a href="index.html"><i class="md md-home"></i> Início</a></li>
-                            <li><a href="typography.html"><i class="md md-event-note"></i> Agenda</a></li>
-                            <li class="sub-menu">
-                                <a href=""><i class="md  md-local-restaurant"></i> Dietas</a>
-
-                                <ul>
-                                    <li><a href="widget-templates.html">Itens de dieta</a></li>
-                                    <li><a class="active" href="widgets.html">Elaboração de dietas</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="typography.html"><i class="md  md-perm-contact-cal"></i> Pacientes</a></li>
-                            <li><a href="typography.html"><i class="md  md-view-list"></i> Perguntas(anamnese)</a></li>
-                            <li><a href="typography.html"><i class="md  md-my-library-books"></i> Referências bibliográficas</a></li>
-                            <li class="sub-menu">
-                                <a href=""><i class="md  md-trending-up"></i> Relatórios gerenciais</a>
-
-                                <ul>
-                                    <li><a href="widget-templates.html">Itens de dieta</a></li>
-                                    <li><a class="active" href="widgets.html">Elaboração de dietas</a></li>
-                                </ul>
-                            </li>
-
-                        </ul>
+                        {% block menu %}{% endblock %}
                     </div>
                 </div>
             </aside>
