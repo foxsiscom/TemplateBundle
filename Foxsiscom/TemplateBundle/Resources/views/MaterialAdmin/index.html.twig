@@ -39,7 +39,7 @@
                 </li>
 
                 <li class="logo hidden-xs">
-                    <a href="index.html">irtun <small>(Nutrição funcional)</small></a>
+                    {% block logo %}{% endblock %}
                 </li>
 
                 <li class="pull-right">
@@ -513,6 +513,7 @@
 
             <section id="content">
                 <div class="container">
+                    {% block messages %}{% endblock %}
                     {% block body -%}
                     <div class="block-header">
                         <h2>Dashboard</h2>
