@@ -1,0 +1,15 @@
+<form method="get" action="{{ action }}" enctype="application/x-www-form-urlencoded">
+    <div class="sm-4">
+        <select name="{{ filterFieldName }}">
+            {% for field, label in fields %}
+                <option value="{{ field }}"{% if selectedField == field %} selected="selected"{% endif %}>{{ label }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="sm-5">
+        <input type="text" value="{{ selectedValue }}" name="{{ filterValueName }}" />
+    </div>
+    <div class="sm-2">
+        <button class="btn">{{ options.button }}</button>
+    </div>
+</form>
