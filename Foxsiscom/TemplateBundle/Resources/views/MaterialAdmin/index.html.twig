@@ -30,19 +30,21 @@
 
 	    <header id="header" >
             <ul class="header-inner">
-                <li id="menu-trigger" data-trigger="#sidebar">
-                    <div class="line-wrap">
-                        <div class="line top"></div>
-                        <div class="line center"></div>
-                        <div class="line bottom"></div>
-                    </div>
-                </li>
-
+                {% block menutrigger %}
+                    <li id="menu-trigger" data-trigger="#sidebar">
+                        <div class="line-wrap">
+                            <div class="line top"></div>
+                            <div class="line center"></div>
+                            <div class="line bottom"></div>
+                        </div>
+                    </li>
+                {% endblock %}
                 <li class="logo hidden-xs">
                     {% block logo %}{% endblock %}
                 </li>
 
                 <li class="pull-right">
+                {% block topmenu %}
                 <ul class="top-menu">
                     <li id="toggle-width">
                         <div class="toggle-switch">
@@ -279,6 +281,7 @@
                         <a class="tm-chat" href=""></a>
                     </li>
                     </ul>
+                    {% endblock %}
                 </li>
             </ul>
 
