@@ -5,7 +5,7 @@
    //Get saved layout type from LocalStorage
    var layoutStatus = localStorage.getItem('ma-layout-status');
    if (layoutStatus == 1) {
-       $('body').addClass('sw-toggled');
+       //$('body').addClass('sw-toggled');
        $('#tw-switch').prop('checked', true);
    }
    
@@ -590,7 +590,7 @@ $(document).ready(function(){
     
     //Welcome Message (not for login page)
     if (!$('.login-content')[0]) {
-        notify('Welcome back Mallinda Hollaway', 'inverse');
+        //notify('Welcome back Mallinda Hollaway', 'inverse');
     }
 
     /*

@@ -26,7 +26,7 @@
 
     </head>
 
-    <body>
+    <body class="{% block menutriggerSidebar %}toggled sw-toggled{% endblock %}">
 
 	    <header id="header" >
             <ul class="header-inner">
@@ -1166,6 +1166,8 @@
         %}
         <script src="{{ asset_url }}"></script>
         {% endjavascripts %}
+        <script src="{{ asset('bundles/irtuncore/js/AnyChart/js/anychart.min.js') }}"></script>
+        <script src="{{ asset('bundles/irtuncore/js/highcharts/js/highcharts.js') }}"></script>
         <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
         <script src="{{ path('fos_js_routing_js', {"callback": "fos.Router.setData"}) }}"></script>
         {% endblock %}
