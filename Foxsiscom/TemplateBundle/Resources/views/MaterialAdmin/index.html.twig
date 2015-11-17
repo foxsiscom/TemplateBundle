@@ -295,6 +295,7 @@
             <aside id="sidebar">
                 <div class="sidebar-inner">
                     <div class="si-inner">
+                        {% block profile %}
                         <div class="profile-menu">
                             <a href="">
                                 <div class="profile-pic">
@@ -320,6 +321,7 @@
                                 </li>
                             </ul>
                         </div>
+                        {% endblock %}
                         {% block menu %}{% endblock %}
                     </div>
                 </div>
