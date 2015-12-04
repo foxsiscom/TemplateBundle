@@ -1,4 +1,4 @@
-{% extends 'knp_menu_base.html.twig' %}
+{% extends 'knp_menu.html.twig' %}
 
 {% macro attributes(attributes) %}
 {% for name, value in attributes %}
@@ -20,4 +20,14 @@
             {{ block('children') }}
         </ul>
     {% endif %}
+{% endblock %}
+
+{% block linkElement %}
+    {% import _self as knp_menu %}
+    <a href="{{ item.uri }}"{{ knp_menu.attributes(item.linkAttributes) }}>
+    {% if item.extras.icon is defined %}
+            <i class="{{ item.extras.icon }}"></i>
+        {% endif %}
+    {{ block('label') }}
+    </a>
 {% endblock %}
