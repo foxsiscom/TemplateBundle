@@ -1,4 +1,6 @@
-# TemplateBundle
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/a16747e6-5909-412a-ac90-f1e0d8b7f141/big.png)](https://insight.sensiolabs.com/projects/a16747e6-5909-412a-ac90-f1e0d8b7f141)
+
+# TemplateBundle 
 
 
 ### Step 1: Download de bundle
