@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-        <title>{% block htmlTitle %}Nutrição Funcional{% endblock %}</title>
+        <title>{% block htmlTitle %}Title{% endblock %}</title>
         <meta name="application-name" content="Nutrição funcional" />
         <!-- Mobile Specific Metas -->
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,12 +13,11 @@
 
        {% block stylesheets %}
             {% stylesheets filter='cssrewrite'
-                'bundles/foxsiscomtemplate/theme/MaterialAdmin/vendors/fullcalendar/fullcalendar.css'
+                'bundles/foxsiscomtemplate/theme/MaterialAdmin/vendors/bower_components/fullcalendar/dist/fullcalendar.css'
                 'bundles/foxsiscomtemplate/theme/MaterialAdmin/vendors/animate-css/animate.min.css'
                 'bundles/foxsiscomtemplate/theme/MaterialAdmin/vendors/sweet-alert/sweet-alert.min.css'
                 'bundles/foxsiscomtemplate/theme/MaterialAdmin/vendors/summernote/summernote.css'
                 'bundles/foxsiscomtemplate/theme/MaterialAdmin/css/app.min.css'
-
                 'bundles/foxsiscomtemplate/theme/MaterialAdmin/vendors/bower_components/animate.css/animate.min.css'
                 'bundles/foxsiscomtemplate/theme/MaterialAdmin/vendors/bower_components/bootstrap-sweetalert/lib/sweet-alert.css'
                 'bundles/foxsiscomtemplate/theme/MaterialAdmin/vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css'
@@ -1139,7 +1138,7 @@
         </section>
         {% block modal %}
     	    <div class="modal fade bs-modal-md" id="mainModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-    		  <div class="modal-dialog modal-md">
+    		  <div class="modal-dialog modal-lg">
     		    <div class="modal-content">
 
     		    </div>
@@ -1180,8 +1179,7 @@
         %}
         <script src="{{ asset_url }}"></script>
         {% endjavascripts %}
-        <script src="{{ asset('bundles/irtuncore/js/AnyChart/js/anychart.min.js') }}"></script>
-        <script src="{{ asset('bundles/irtuncore/js/highcharts/js/highcharts.js') }}"></script>
+        <script src="{{ asset('bundles/foxcore/js/main.js') }}"></script>
         <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
         <script src="{{ path('fos_js_routing_js', {"callback": "fos.Router.setData"}) }}"></script>
         {% endblock %}
