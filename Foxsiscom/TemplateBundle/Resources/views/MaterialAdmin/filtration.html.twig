@@ -1,15 +1,17 @@
 <form method="get" action="{{ action }}" enctype="application/x-www-form-urlencoded">
-    <div class="sm-4">
-        <select name="{{ filterFieldName }}">
-            {% for field, label in fields %}
-                <option value="{{ field }}"{% if selectedField == field %} selected="selected"{% endif %}>{{ label }}</option>
-            {% endfor %}
-        </select>
+    <div class="col-sm-4 col-lg-4 col-xs-4 col-md-4">
+        <div class="select fg-line">
+            <select class="form-control input-sm" name="{{ filterFieldName }}">
+                {% for field, label in fields %}
+                    <option value="{{ field }}"{% if selectedField == field %} selected="selected"{% endif %}>{{ label }}</option>
+                {% endfor %}
+            </select>
+        </div>
     </div>
-    <div class="sm-5">
-        <input type="text" value="{{ selectedValue }}" name="{{ filterValueName }}" />
+    <div class="col-sm-4 col-lg-4 col-xs-4 col-md-4 ">
+        <input class="form-control input-sm" type="text" value="{{ selectedValue }}" name="{{ filterValueName }}" />
     </div>
-    <div class="sm-2">
-        <button class="btn">{{ options.button }}</button>
+    <div class="col-sm-2">
+        <button class="btn btn-sm">{{ options.button }}</button>
     </div>
 </form>

@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-        <title>{% block htmlTitle %}Nutrição Funcional{% endblock %}</title>
+        <title>{% block htmlTitle %}Title{% endblock %}</title>
         <meta name="application-name" content="Nutrição funcional" />
         <!-- Mobile Specific Metas -->
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,11 +13,15 @@
 
        {% block stylesheets %}
             {% stylesheets filter='cssrewrite'
-                'bundles/foxsiscomtemplate/theme/MaterialAdmin/vendors/fullcalendar/fullcalendar.css'
+                'bundles/foxsiscomtemplate/theme/MaterialAdmin/vendors/bower_components/fullcalendar/dist/fullcalendar.css'
                 'bundles/foxsiscomtemplate/theme/MaterialAdmin/vendors/animate-css/animate.min.css'
                 'bundles/foxsiscomtemplate/theme/MaterialAdmin/vendors/sweet-alert/sweet-alert.min.css'
                 'bundles/foxsiscomtemplate/theme/MaterialAdmin/vendors/summernote/summernote.css'
                 'bundles/foxsiscomtemplate/theme/MaterialAdmin/css/app.min.css'
+                'bundles/foxsiscomtemplate/theme/MaterialAdmin/vendors/bower_components/animate.css/animate.min.css'
+                'bundles/foxsiscomtemplate/theme/MaterialAdmin/vendors/bower_components/bootstrap-sweetalert/lib/sweet-alert.css'
+                'bundles/foxsiscomtemplate/theme/MaterialAdmin/vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css'
+                'bundles/foxsiscomtemplate/theme/MaterialAdmin/vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css'
             %}
                 <link rel="stylesheet" href="{{ asset_url }}" />
             {% endstylesheets %}
@@ -26,23 +30,25 @@
 
     </head>
 
-    <body>
+    <body class="{% block menutriggerSidebar %}toggled sw-toggled{% endblock %}">
 
-	    <header id="header">
+	    <header id="header" >
             <ul class="header-inner">
-                <li id="menu-trigger" data-trigger="#sidebar">
-                    <div class="line-wrap">
-                        <div class="line top"></div>
-                        <div class="line center"></div>
-                        <div class="line bottom"></div>
-                    </div>
-                </li>
-
+                {% block menutrigger %}
+                    <li id="menu-trigger" data-trigger="#sidebar">
+                        <div class="line-wrap">
+                            <div class="line top"></div>
+                            <div class="line center"></div>
+                            <div class="line bottom"></div>
+                        </div>
+                    </li>
+                {% endblock %}
                 <li class="logo hidden-xs">
                     {% block logo %}{% endblock %}
                 </li>
 
                 <li class="pull-right">
+                {% block topmenu %}
                 <ul class="top-menu">
                     <li id="toggle-width">
                         <div class="toggle-switch">
@@ -258,27 +264,28 @@
                             </div>
                         </div>
                     </li>
-                    <li class="dropdown">
-                        <a data-toggle="dropdown" class="tm-settings" href=""></a>
-                        <ul class="dropdown-menu dm-icon pull-right">
-                            <li>
-                                <a data-action="fullscreen" href=""><i class="md md-fullscreen"></i> Toggle Fullscreen</a>
-                            </li>
-                            <li>
-                                <a data-action="clear-localstorage" href=""><i class="md md-delete"></i> Clear Local Storage</a>
-                            </li>
-                            <li>
-                                <a href=""><i class="md md-person"></i> Privacy Settings</a>
-                            </li>
-                            <li>
-                                <a href=""><i class="md md-settings"></i> Other Settings</a>
-                            </li>
-                        </ul>
-                    </li>
+{#                     <li class="dropdown">#}
+{#                         <a data-toggle="dropdown" class="tm-settings" href=""></a>#}
+{#                         <ul class="dropdown-menu dm-icon pull-right">#}
+{#                             <li>#}
+{#                                 <a data-action="fullscreen" href=""><i class="md md-fullscreen"></i> Toggle Fullscreen</a>#}
+{#                             </li>#}
+{#                             <li>#}
+{#                                 <a data-action="clear-localstorage" href=""><i class="md md-delete"></i> Clear Local Storage</a>#}
+{#                             </li>#}
+{#                             <li>#}
+{#                                 <a href=""><i class="md md-person"></i> Privacy Settings</a>#}
+{#                             </li>#}
+{#                             <li>#}
+{#                                 <a href=""><i class="md md-settings"></i> Other Settings</a>#}
+{#                             </li>#}
+{#                         </ul>#}
+{#                     </li>#}
                     <li class="hidden-xs" id="chat-trigger" data-trigger="#chat">
                         <a class="tm-chat" href=""></a>
                     </li>
                     </ul>
+                    {% endblock %}
                 </li>
             </ul>
 
@@ -292,34 +299,33 @@
             <aside id="sidebar">
                 <div class="sidebar-inner">
                     <div class="si-inner">
+                        {% block profile %}
                         <div class="profile-menu">
                             <a href="">
                                 <div class="profile-pic">
-                                    <img src="" alt="">
+                                    <img src="http://s.gravatar.com/avatar/290835628d8861fa52570a279ec20a26?s=80" alt="">
+
                                 </div>
 
                                 <div class="profile-info">
-                                    Malinda Hollaway
-
+                                    Nutricionista autenticado
                                     <i class="md md-arrow-drop-down"></i>
                                 </div>
                             </a>
 
                             <ul class="main-menu">
                                 <li>
-                                    <a href=""><i class="md md-person"></i> View Profile</a>
+                                    <a href=""><i class="md md-person"></i> Visualizar profile</a>
                                 </li>
                                 <li>
-                                    <a href=""><i class="md md-settings-input-antenna"></i> Privacy Settings</a>
+                                    <a href=""><i class="md md-settings"></i> Configurações de conta</a>
                                 </li>
                                 <li>
-                                    <a href=""><i class="md md-settings"></i> Settings</a>
-                                </li>
-                                <li>
-                                    <a href=""><i class="md md-history"></i> Logout</a>
+                                    <a href="{{ path('fos_user_security_logout') }}"><i class="md md-history"></i> Sair da aplicação</a>
                                 </li>
                             </ul>
                         </div>
+                        {% endblock %}
                         {% block menu %}{% endblock %}
                     </div>
                 </div>
@@ -1130,6 +1136,15 @@
                 </div>
             </section>
         </section>
+        {% block modal %}
+    	    <div class="modal fade bs-modal-md" id="mainModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    		  <div class="modal-dialog modal-lg">
+    		    <div class="modal-content">
+
+    		    </div>
+    		  </div>
+    		</div>
+		{% endblock %}
 
 
 	    {% block javascripts %}
@@ -1149,8 +1164,9 @@
             '@FoxsiscomTemplateBundle/Resources/public/theme/MaterialAdmin/vendors/chosen/chosen.jquery.min.js'
             '@FoxsiscomTemplateBundle/Resources/public/theme/MaterialAdmin/vendors/simpleWeather/jquery.simpleWeather.min.js'
             '@FoxsiscomTemplateBundle/Resources/public/theme/MaterialAdmin/vendors/auto-size/jquery.autosize.min.js'
-            '@FoxsiscomTemplateBundle/Resources/public/theme/MaterialAdmin/vendors/nicescroll/jquery.nicescroll.min.js'
-            '@FoxsiscomTemplateBundle/Resources/public/theme/MaterialAdmin/vendors/waves/waves.min.js'
+            '@FoxsiscomTemplateBundle/Resources/public/theme/MaterialAdmin/vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js'
+            '@FoxsiscomTemplateBundle/Resources/public/theme/MaterialAdmin/vendors/bootstrap-growl/bootstrap-growl.min.js'
+            '@FoxsiscomTemplateBundle/Resources/public/theme/MaterialAdmin/vendors/bower_components/Waves/dist/waves.min.js'
             '@FoxsiscomTemplateBundle/Resources/public/theme/MaterialAdmin/vendors/bootstrap-growl/bootstrap-growl.min.js'
             '@FoxsiscomTemplateBundle/Resources/public/theme/MaterialAdmin/vendors/sweet-alert/sweet-alert.min.js'
             '@FoxsiscomTemplateBundle/Resources/public/theme/MaterialAdmin/vendors/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js'
@@ -1158,10 +1174,12 @@
             '@FoxsiscomTemplateBundle/Resources/public/theme/MaterialAdmin/js/flot-charts/curved-line-chart.js'
             '@FoxsiscomTemplateBundle/Resources/public/theme/MaterialAdmin/js/flot-charts/line-chart.js'
             '@FoxsiscomTemplateBundle/Resources/public/theme/MaterialAdmin/js/charts.js'
+            '@FoxsiscomTemplateBundle/Resources/public/theme/MaterialAdmin/js/jquery-dateFormat.js'
             '@FoxsiscomTemplateBundle/Resources/public/theme/MaterialAdmin/js/functions.js'
         %}
         <script src="{{ asset_url }}"></script>
         {% endjavascripts %}
+        <script src="{{ asset('bundles/foxcore/js/main.js') }}"></script>
         <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
         <script src="{{ path('fos_js_routing_js', {"callback": "fos.Router.setData"}) }}"></script>
         {% endblock %}
