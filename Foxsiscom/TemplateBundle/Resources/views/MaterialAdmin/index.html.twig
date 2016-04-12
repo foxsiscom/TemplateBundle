@@ -26,8 +26,9 @@
                 <link rel="stylesheet" href="{{ asset_url }}" />
             {% endstylesheets %}
         {% endblock %}
+        {% block maincss %}{% endblock %}
         {% block css %}{% endblock %}
-
+        <script src="{{ asset('js/jquery.js') }}"></script>
     </head>
 
     <body class="{% block menutriggerSidebar %}toggled sw-toggled{% endblock %}">
@@ -1148,10 +1149,7 @@
 
 
 	    {% block javascripts %}
-
-
         {% javascripts
-            '@FoxsiscomTemplateBundle/Resources/public/theme/MaterialAdmin/js/jquery-2.1.1.min.js'
             '@FoxsiscomTemplateBundle/Resources/public/theme/MaterialAdmin/js/bootstrap.min.js'
             '@FoxsiscomTemplateBundle/Resources/public/theme/MaterialAdmin/vendors/flot/jquery.flot.min.js'
             '@FoxsiscomTemplateBundle/Resources/public/theme/MaterialAdmin/vendors/flot/jquery.flot.resize.min.js'
@@ -1179,10 +1177,10 @@
         %}
         <script src="{{ asset_url }}"></script>
         {% endjavascripts %}
-        <script src="{{ asset('bundles/foxcore/js/main.js') }}"></script>
         <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
         <script src="{{ path('fos_js_routing_js', {"callback": "fos.Router.setData"}) }}"></script>
         {% endblock %}
+        {% block mainjs %}{% endblock %}
         {% block js %}{% endblock %}
     </body>
 </html>
