@@ -8,7 +8,7 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	    <!-- Force IE9 to render in normla mode -->
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <base href="{{ app.request.getSchemeAndHttpHost() }}/" />
+        <base href="/" />
         <meta name="msapplication-TileColor" content="#3399cc"/>
 
        {% block stylesheets %}
@@ -1138,11 +1138,9 @@
             </section>
         </section>
         {% block modal %}
-    	    <div class="modal fade bs-modal-md" id="mainModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    	    <div class="modal fade bs-modal" id="mainModal" tabindex="-1" role="dialog" aria-hidden="true">
     		  <div class="modal-dialog modal-lg">
-    		    <div class="modal-content">
-
-    		    </div>
+    		    <div class="modal-content"></div>
     		  </div>
     		</div>
 		{% endblock %}
@@ -1158,7 +1156,7 @@
             '@FoxsiscomTemplateBundle/Resources/public/theme/MaterialAdmin/vendors/easypiechart/jquery.easypiechart.min.js'
             '@FoxsiscomTemplateBundle/Resources/public/theme/MaterialAdmin/vendors/fullcalendar/lib/moment.min.js'
             '@FoxsiscomTemplateBundle/Resources/public/theme/MaterialAdmin/vendors/fullcalendar/fullcalendar.min.js'
-            '@FoxsiscomTemplateBundle/Resources/public/theme/MaterialAdmin/vendors/bootstrap-select/bootstrap-select.min.js'
+            '@FoxsiscomTemplateBundle/Resources/public/theme/MaterialAdmin/vendors/bootstrap-select/bootstrap-select.js'
             '@FoxsiscomTemplateBundle/Resources/public/theme/MaterialAdmin/vendors/chosen/chosen.jquery.min.js'
             '@FoxsiscomTemplateBundle/Resources/public/theme/MaterialAdmin/vendors/simpleWeather/jquery.simpleWeather.min.js'
             '@FoxsiscomTemplateBundle/Resources/public/theme/MaterialAdmin/vendors/auto-size/jquery.autosize.min.js'
