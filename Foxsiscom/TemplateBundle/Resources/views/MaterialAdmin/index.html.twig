@@ -296,40 +296,36 @@
                 <i id="top-search-close">&times;</i>
             </div>
         </header>
-        <section id="main">
-            <aside id="sidebar">
-                <div class="sidebar-inner">
-                    <div class="si-inner">
-                        {% block profile %}
-                        <div class="profile-menu">
-                            <a href="">
-                                <div class="profile-pic">
-                                    <img src="http://s.gravatar.com/avatar/290835628d8861fa52570a279ec20a26?s=80" alt="">
+        <section id="main" data-layout="layout-1">
+            <aside id="sidebar" class="sidebar c-overflow">
+                {% block profile %}
+                <div class="profile-menu">
+                    <a href="">
+                        <div class="profile-pic">
+                            <img src="http://s.gravatar.com/avatar/290835628d8861fa52570a279ec20a26?s=80" alt="">
 
-                                </div>
-
-                                <div class="profile-info">
-                                    Nutricionista autenticado
-                                    <i class="md md-arrow-drop-down"></i>
-                                </div>
-                            </a>
-
-                            <ul class="main-menu">
-                                <li>
-                                    <a href=""><i class="md md-person"></i> Visualizar profile</a>
-                                </li>
-                                <li>
-                                    <a href=""><i class="md md-settings"></i> Configurações de conta</a>
-                                </li>
-                                <li>
-                                    <a href="{{ path('fos_user_security_logout') }}"><i class="md md-history"></i> Sair da aplicação</a>
-                                </li>
-                            </ul>
                         </div>
-                        {% endblock %}
-                        {% block menu %}{% endblock %}
-                    </div>
+
+                        <div class="profile-info">
+                            Nutricionista autenticado
+                            <i class="md md-arrow-drop-down"></i>
+                        </div>
+                    </a>
+
+                    <ul class="main-menu">
+                        <li>
+                            <a href=""><i class="md md-person"></i> Visualizar profile</a>
+                        </li>
+                        <li>
+                            <a href=""><i class="md md-settings"></i> Configurações de conta</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('fos_user_security_logout') }}"><i class="md md-history"></i> Sair da aplicação</a>
+                        </li>
+                    </ul>
                 </div>
+                {% endblock %}
+                {% block menu %}{% endblock %}
             </aside>
 
             <aside id="chat">
@@ -1170,6 +1166,7 @@
             '@FoxsiscomTemplateBundle/Resources/public/theme/MaterialAdmin/js/flot-charts/curved-line-chart.js'
             '@FoxsiscomTemplateBundle/Resources/public/theme/MaterialAdmin/js/flot-charts/line-chart.js'
             '@FoxsiscomTemplateBundle/Resources/public/theme/MaterialAdmin/js/charts.js'
+            '@FoxsiscomTemplateBundle/Resources/public/theme/MaterialAdmin/vendors/fileinput/fileinput.min.js'
             '@FoxsiscomTemplateBundle/Resources/public/theme/MaterialAdmin/js/jquery-dateFormat.js'
             '@FoxsiscomTemplateBundle/Resources/public/theme/MaterialAdmin/js/functions.js'
         %}

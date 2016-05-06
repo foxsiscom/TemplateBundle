@@ -20,6 +20,12 @@ $(window).load(function () {
 })
 
 $(document).ready(function(){
+    
+ // para não fazer cache do ajax na modal
+    $('.modal').on('hidden.bs.modal', function() {
+        $(this).removeData('bs.modal');
+    });
+    
     /* --------------------------------------------------------
         Layout
     -----------------------------------------------------------*/
