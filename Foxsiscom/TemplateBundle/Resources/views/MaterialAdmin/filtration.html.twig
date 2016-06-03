@@ -1,17 +1,17 @@
+<div class="row col-sm-11 col-lg-11 col-xs-11 col-md-11">
 <form method="get" action="{{ action }}" enctype="application/x-www-form-urlencoded">
-    <div class="col-sm-4 col-lg-4 col-xs-4 col-md-4">
-        <div class="">
-            <select class="form-control input-sm" name="{{ filterFieldName }}">
+    <div class="form-group col-sm-5 col-lg-5 col-xs-5 col-md-5">
+            <select class="form-control fg-line" name="{{ filterFieldName }}">
                 {% for field, label in fields %}
                     <option value="{{ field }}"{% if selectedField == field %} selected="selected"{% endif %}>{{ label }}</option>
                 {% endfor %}
             </select>
-        </div>
     </div>
-    <div class="col-sm-4 col-lg-4 col-xs-4 col-md-4 ">
-        <input class="form-control fg-line input-sm" type="text" value="{{ selectedValue }}" name="{{ filterValueName }}" />
+    <div class="form-group col-sm-5 col-lg-5 col-xs-5 col-md-5">
+        <input class="form-control" type="text" value="{{ selectedValue }}" name="{{ filterValueName }}" />
     </div>
-    <div class="col-sm-2">
+	<div class="col-sm-2 col-lg-2 col-xs-2 col-md-2 ">
         <button class="btn btn-sm">{{ options.button }}</button>
     </div>
 </form>
+</div>
