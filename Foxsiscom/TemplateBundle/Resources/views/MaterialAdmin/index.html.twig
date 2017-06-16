@@ -28,10 +28,13 @@
         {% endblock %}
         {% block maincss %}{% endblock %}
         {% block css %}{% endblock %}
+
+        <link rel="stylesheet" href="../bundles/cnccnc/cnc/Estilos-padrao-index.css" />
+        
         <script src="{{ asset('js/jquery.js') }}"></script>
     </head>
 
-    <body class="{% block menutriggerSidebar %}toggled sw-toggled{% endblock %}">
+    <body class="BodyPrincipal {% block menutriggerSidebar %}toggled sw-toggled{% endblock %}">
 
 	    <header id="header" >
             <ul class="header-inner">
