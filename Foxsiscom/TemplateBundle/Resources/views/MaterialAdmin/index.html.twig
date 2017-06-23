@@ -40,16 +40,16 @@
             <ul class="header-inner">
                 {% block menutrigger %}
                     <li id="menu-trigger" data-trigger="#sidebar">
-                        <div class="line-wrap">
-                            <div class="line top"></div>
-                            <div class="line center"></div>
-                            <div class="line bottom"></div>
-                        </div>
+                        <span class="iconMenu"><i class="fa fa-bars" aria-hidden="true"></i></span>
+                        <span class="iconVoltar"><i class="zmdi zmdi-arrow-left" aria-hidden="true"></i></span>
                     </li>
                 {% endblock %}
                 <li class="logo hidden-xs">
                     {% block logo %}{% endblock %}
                 </li>
+                <div class="logo visible-xs">
+                    {% block logoResp %}{% endblock %}
+                </div>
 
                 <li class="pull-right">
                 {% block topmenu %}
