@@ -370,9 +370,9 @@ $(document).ready(function(){
     /*
      * Auto Hight Textarea
      */
-    if ($('.auto-size')[0]) {
-	   autosize($('.auto-size'));
-    }
+//    if ($('.auto-size')[0]) {
+//	   autosize($('.auto-size'));
+//    }
 
     /*
     * Profile Menu
