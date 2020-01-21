@@ -10,7 +10,7 @@
 	},
 	"require" : {
 		"php" : ">=5.3.3",
-		"friendsofsymfony/jsrouting-bundle" : "1.6.0"
+		"friendsofsymfony/jsrouting-bundle" : "2.0.0"
 	},
 	"homepage" : "https://github.com/foxsiscom/templatebundle",
 	"support" : {
